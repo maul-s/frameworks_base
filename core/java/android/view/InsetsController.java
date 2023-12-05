@@ -1021,7 +1021,7 @@ public class InsetsController implements WindowInsetsController, InsetsAnimation
                 final InsetsSourceConsumer consumer = mSourceConsumers.get(control.getId());
                 if (consumer == null) {
                     control.release(SurfaceControl::release);
-                    Log.e(TAG, control + " has no consumer.");
+                    //Log.e(TAG, control + " has no consumer.");
                 }
             }
         }
