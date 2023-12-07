@@ -485,10 +485,10 @@ class IslandView : ExtendedFloatingActionButton {
     }
 
     private fun shouldShowIslandNotification(): Boolean {
-        var shouldShowNotification = !isCurrentNotifActivityOnTop(notifPackage) or !isCurrentNotifActivityOnTop(getActiveAppVolumePackage())
+        var shouldShowNotification = !isCurrentNotifActivityOnTop(notifPackage)
         val taskStackListener = object : TaskStackListener() {
             override fun onTaskStackChanged() {
-                shouldShowNotification = !isCurrentNotifActivityOnTop(notifPackage) or !isCurrentNotifActivityOnTop(getActiveAppVolumePackage())
+                shouldShowNotification = !isCurrentNotifActivityOnTop(notifPackage)
             }
         }
         try {
